@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AzureFunctionsVersion>v3</AzureFunctionsVersion>
@@ -8,21 +7,17 @@
     <IsPackable>false</IsPackable>
     <VersionPrefix>0.0.1</VersionPrefix>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.3" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectCapability Include="DynamicDependentFile" />
     <ProjectCapability Include="DynamicFileNesting" />
   </ItemGroup>
-
   <ItemGroup>
     <None Update="appsettings.dev.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -53,6 +48,9 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
   </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties local_1settings_1json__JsonSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties local_1settings_1json__JsonSchema="http://json.schemastore.org/appsettings" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
